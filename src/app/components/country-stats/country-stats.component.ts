@@ -11,7 +11,7 @@ import { CountryService } from 'src/app/services/country.service';
 })
 export class CountryStatsComponent implements OnInit {
 
-  second: Second;
+  second: Second[];
 
   constructor(private countryService: CountryService,
     private route: ActivatedRoute) { }

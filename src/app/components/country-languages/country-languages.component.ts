@@ -12,10 +12,7 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class CountryLanguagesComponent implements OnInit {
 
-  languages: Language = {
-    language_id: 0,
-    language: ''
-  };
+  languages: Language[];
   theCountryId: number = 5;
 
   constructor(private languageService: LanguageService,

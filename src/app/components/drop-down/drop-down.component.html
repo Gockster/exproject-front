@@ -1,0 +1,19 @@
+<form class="form-header">
+    <input  #myInput type="text" 
+            placeholder="Region..." 
+            class="au-input au-input-xl" 
+            (keyup.enter)="doDrop(myInput.value)" />
+    <button (click)="doDrop(myInput.value)" class="au-btn-submit">
+        Drop
+    </button><br>
+
+   <!-- <div class="input-space">
+    <select formControlName="name">
+        <option *ngFor="let exp of $any(region)">
+                {{exp}}
+        </option>
+    </select>
+   </div> -->
+
+
+

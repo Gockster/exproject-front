@@ -12,10 +12,10 @@ export class LanguageService {
 
   constructor(private httpClient: HttpClient) { }
   
-  getLanguageList(theCountryId: number): Observable<Language> {
+  getLanguageList(theCountryId: number): Observable<Language[]> {
     const languageUrl = `${this.baseUrl}/languages/${theCountryId}`;
 
-    return this.httpClient.get<Language>(languageUrl);
+    return this.httpClient.get<Language[]>(languageUrl);
       
     
   }

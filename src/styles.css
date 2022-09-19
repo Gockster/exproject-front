@@ -286,11 +286,11 @@ input.au-input.au-input-xl{
     right:0;
     min-width:95px;
     color:#fff;
-    border:1px solid #205b8d;
+    border:1px solid #ffffff;
     -webkit-border-radius:3px;
     -moz-border-radius:3px;
     border-radius:43px;
-    background:#205b8d
+    background:#9e9b9e
 }
 
 .au-btn-submit:hover{
@@ -1001,11 +1001,11 @@ footer ul li{
         right:10px;
         min-width:85px;
         color:#fff;
-        border:1px solid #205b8d;
+        border:1px solid #dadee1;
         -webkit-border-radius:3px;
         -moz-border-radius:3px;
         border-radius:0;
-        background:#205b8d
+        background:#a0a0a0
     }
     input.au-input.au-input-xl{
         border-radius:0!important;

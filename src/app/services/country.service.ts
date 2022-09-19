@@ -1,3 +1,4 @@
+import { Region } from './../common/region';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -12,7 +13,6 @@ import { Expert } from '../common/expert';
 })
 export class CountryService {
  
-
   private baseUrl = 'http://localhost:8080/countries';
   //languageUrl: string;
   detailUrl: string;
@@ -25,24 +25,30 @@ export class CountryService {
 
   }
 
-  getResultList():Observable<Second> {
+  getResultList():Observable<Second[]> {
     const resultUrl = 'http://localhost:8080/second'
 
-    return this.httpClient.get<Second>(resultUrl);
+    return this.httpClient.get<Second[]>(resultUrl);
   }
 
-  getData(): Observable<Expert>{
+  getData(): Observable<Expert[]>{
     const totalUrl = 'http://localhost:8080/expert';
 
-    return this.httpClient.get<Expert>(totalUrl);
+    return this.httpClient.get<Expert[]>(totalUrl);
   }
   
+  searchAll(theKeyword: string): Observable<Expert[]> {
+    const searchUrl = `http://localhost:8080/search/${theKeyword}`;
 
-  // getCountryDetails(theConId: number): Observable<Country> {
-  //   const detailUrl = `${this.baseUrl}/${theConId}`;
+    return this.httpClient.get<Expert[]>(searchUrl);
+  }
 
-  //   return this.httpClient.get<Country>(this.detailUrl);
-  // }
+  dropAll(dropDown: string): Observable<Expert[]> {
+    const dropUrl = `http://localhost:8080/region/${dropDown}`;
+
+    return this.httpClient.get<Expert[]>(dropUrl);
+  }
+
 }
 
 
